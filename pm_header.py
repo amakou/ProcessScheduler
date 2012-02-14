@@ -15,7 +15,8 @@ class task_status:
 class task_info:
     def __init__(self):
         self.stack = range(STACK_SIZE)
-        self.stack_pointer
+        self.sp
+        self.frame
         self.id
     
         self.status
@@ -37,9 +38,20 @@ class frame:
 class schedule_handle:
     def __init__(self):
         self.child_num = 0
-        self.running_task
-        self.root_task
+        self.running_task = None
+        self.root_task = None
         
-                
+        self.global_sp
+        self.frame_save
+        self.sp_save_before
+        self.sp_save_after
+        
+        self.task_list = []
+        
+class cpu_info:
+    def __init(self):
+        self.frame
+        self.esp
+                        
         
             

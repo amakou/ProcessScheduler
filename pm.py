@@ -33,25 +33,23 @@ def thread_three():
         time.sleep(2)
         if i == 1005:
             break    
-
-
         
 if __name__ == '__main__':
+    cpu = cpu_info()
     sh = schedule_handle()  
-    threads = []
     
-    th = threading.Thread(target=thread_one, args=())
-    th.start()
-    threads.append(th)
-    th = threading.Thread(target=thread_two, args=())
-    th.start()
-    threads.append(th)
-    th = threading.Thread(target=thread_three, args=())
-    th.start()
-    threads.append(th)
+#    th = threading.Thread(target=thread_one, args=())
+#    th.start()
+#    threads.append(th)
+#    th = threading.Thread(target=thread_two, args=())
+#    th.start()
+#    threads.append(th)
+#    th = threading.Thread(target=thread_three, args=())
+#    th.start()
+#    threads.append(th)
     
     # thread_wait in c
-    for th in threads:
-        th.join()       
+#    for th in threads:
+#        th.join()       
     
         
